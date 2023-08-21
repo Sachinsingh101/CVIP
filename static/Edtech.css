@@ -1,0 +1,26 @@
+
+html {
+ scroll-behavior: smooth;
+}
+.slide img {
+ height: 200px;
+}
+* {
+ margin: 0;
+ padding: 0;
+}
+
+@keyframes showcourse {
+ 0% {
+   transform: scale(1);
+ }
+ 100% {
+   transform: scale(1.1);
+ }
+}
+
+.showcourse {
+ animation-name: showcourse;
+ animation-duration: 1s;
+ animation-iteration-count: infinite;
+}

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../static/Edtech.css" />
+
+  </head>
+  <body>
+
+    <!-- Navigation bar  -->
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Edtech Academy</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul
+            class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+            style="--bs-scroll-height: 100px"
+          >
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Action
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#beginner">Beginner's </a></li>
+                <li><a class="dropdown-item" href="#expert">Advance </a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#newly">Newly Launched</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <input
+            class="form-control me-2 search"
+            type="search"
+            placeholder="Try html, software, dsa for demo test"
+            aria-label="Search"
+            onchange="findfun()"
+          />
+          <button class="btn btn-outline-success">Search</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Carousal  -->
+
+    <div class="container-fluid">
+      <div class="row" style="justify-content: center">
+        <div class="col-12">
+          <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/python.jpg" class="d-block w-100" alt="..." />
+              </div>
+              <div class="carousel-item">
+                <img src="images/java.jpg" class="d-block w-100" alt="..." />
+              </div>
+              <div class="carousel-item">
+                <img src="images/dsa.jpg" class="d-block w-100" alt="..." />
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExample"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Course Catalog or Hero section -->
+
+    <div class="container">
+      <div class="row">
+        <h5 id="showlenght"  style="color: red;" class="col-3"></h5>
+      </div>
+      <div class="row">
+        <div class="col mt-5">
+          <h4 id="trending">Trending</h4>
+        </div>
+        <div class="row">
+          <div id="software" class="card m-3 courses" style="width: 18rem">
+            <img src="images/software.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Software Engineering</h5>
+              <p class="card-text">
+                This Course will introudce from very beginning to advance level
+                and covers each topic in detail
+              </p>
+              <a href="" class="btn btn-primary" onclick="alert('Successful')">Enroll Now</a>
+            </div>
+          </div>
+          <div id="html" class="card m-3" style="width: 18rem">
+            <img src="images/html.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Complete HTML5</h5>
+              <p class="card-text">
+                This Course will introudce from very beginning to advance level
+                and covers each topic in detail
+              </p>
+              <a href="#" class="btn btn-primary" onclick="alert('Successful')">Enroll Now</a>
+            </div>
+          </div>
+          <div id="dsa" class="card m-3" style="width: 18rem">
+            <img src="images/dsa.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Advance DSA</h5>
+              <p class="card-text">
+                This Course will introudce from very beginning to advance level
+                and covers each topic in detail
+              </p>
+              <a href="#" class="btn btn-primary" onclick="alert('Successful')">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col mt-5">
+          <h4 id="beginner">Beginner's friendly</h4>
+        </div>
+        <div class="row">
+          <div class="card m-3" style="width: 18rem">
+            <img src="images/software.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Software Engineering</h5>
+              <p class="card-text">
+                This Course will introudce from very beginning to advance level
+                and covers each topic in detail
+              </p>
+              <a href="#" class="btn btn-primary" onclick="alert('Successful')">Enroll Now</a>
+            </div>
+          </div>
+          <div class="card m-3" style="width: 18rem">
+            <img src="images/html.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">HTML5</h5>
+              <p class="card-text">
+                This Course will introudce from very beginning to advance level
+                and covers each topic in detail
+              </p>
+              <a href="#" class="btn btn-primary" onclick="alert('Successful')">Enroll Now</a>
+            </div>
+          </div>
+          <div class="card m-3" style="width: 18rem">
+            <img src="images/dsa.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Advance DSA</h5>
+              <p class="card-text">
+                This Course will introudce from very beginning to advance level
+                and covers each topic in detail
+              </p>
+              <a href="#" class="btn btn-primary" onclick="alert('Successful')">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col mt-5">
+          <h4 id="expert">Expert</h4>
+        </div>
+        <div class="row">
+          <div class="card m-3" style="width: 18rem">
+            <img src="images/software.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Software Engineering</h5>
+              <p class="card-text">
+                This Course will introudce from very beginning to advance level
+                and covers each topic in detail
+              </p>
+              <a href="#" class="btn btn-primary" onclick="alert('Successful')">Enroll Now</a>
+            </div>
+          </div>
+          <div class="card m-3" style="width: 18rem">
+            <img src="images/html.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">HTML5</h5>
+              <p class="card-text">
+                This Course will introudce from very beginning to advance level
+                and covers each topic in detail
+              </p>
+              <a href="#" class="btn btn-primary" onclick="alert('Successful')">Enroll Now</a>
+            </div>
+          </div>
+          <div class="card m-3" style="width: 18rem">
+            <img src="images/dsa.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Advance DSA</h5>
+              <p class="card-text">
+                This Course will introudce from very beginning to advance level
+                and covers each topic in detail
+              </p>
+              <a href="#" class="btn btn-primary" onclick="alert('Successful')">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col mt-5">
+          <h4 id="newly">Newly Launched</h4>
+        </div>
+        <div class="row">
+          <div class="card m-3" style="width: 18rem">
+            <img src="images/software.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Software Engineering</h5>
+              <p class="card-text">
+                This Course will introudce from very beginning to advance level
+                and covers each topic in detail
+              </p>
+              <a href="#" class="btn btn-primary" onclick="alert('Successful')">Enroll Now</a>
+            </div>
+          </div>
+          <div class="card m-3" style="width: 18rem">
+            <img src="images/html.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">HTML5</h5>
+              <p class="card-text">
+                This Course will introudce from very beginning to advance level
+                and covers each topic in detail
+              </p>
+              <a href="#" class="btn btn-primary" onclick="alert('Successful')">Enroll Now</a>
+            </div>
+          </div>
+          <div class="card m-3" style="width: 18rem">
+            <img src="images/dsa.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Advance DSA</h5>
+              <p class="card-text">
+                This Course will introudce from very beginning to advance level
+                and covers each topic in detail
+              </p>
+              <a href="#" class="btn btn-primary" onclick="alert('Successful')">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page navigation section  -->
+
+
+    <div class="container">
+      <div class="row" style="justify-content: center">
+        <div class="col-3">
+          <nav>
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" href="#">Previous</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">last</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer section  -->
+
+
+
+    <div class="container-fluid" style="background-color: rgba(0, 0, 0, 0.589)">
+      <div class="row" style="justify-content: center">
+        <div class="col-3 text-muted mt-5">Edtech all right reserved @2023</div>
+      </div>
+      <div class="row mt-5 pt-1" style="justify-content: flex-start">
+        <div
+          class="col"
+          style="display: flex; align-items: center; flex-direction: column"
+        >
+          <h5>Home</h5>
+          <ul style="list-style: none">
+            <li>About</li>
+            <li>Services</li>
+            <li>Community</li>
+            <li>Help</li>
+          </ul>
+        </div>
+        <div
+          class="col"
+          style="display: flex; align-items: center; flex-direction: column"
+        >
+          <h5>About</h5>
+          <ul style="list-style: none">
+            <li>About</li>
+            <li>Services</li>
+            <li>Community</li>
+            <li>Help</li>
+          </ul>
+        </div>
+        <div
+          class="col"
+          style="display: flex; align-items: center; flex-direction: column"
+        >
+          <h5>Services</h5>
+          <ul style="list-style: none">
+            <li>About</li>
+            <li>Services</li>
+            <li>Community</li>
+            <li>Help</li>
+          </ul>
+        </div>
+        <div
+          class="col"
+          style="display: flex; align-items: center; flex-direction: column"
+        >
+          <h5>Community</h5>
+          <ul style="list-style: none">
+            <li>About</li>
+            <li>Services</li>
+            <li>Community</li>
+            <li>Help</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+
+    <!-- Javascript code  -->
+
+    <script>
+      var ele;
+    //   To show no of courses found when search
+      const newele=document.getElementById('showlenght');
+
+    //   To handle searching of courses 
+      function findfun($event) {
+        if (ele) {
+          ele.classList.remove("showcourse");
+          ele.style.background = "white";
+          ele.style.border = "0px";
+        }
+        var s = event.target.value;
+        ele = document.getElementById(s);
+        if (ele) {
+          newele.innerHTML="Courses Found "
+          ele.style.background = "pink";
+          ele.style.border = "2px solid black";
+          ele.classList.add("showcourse");
+        } else {
+          newele.innerHTML='Nothing found';
+        }
+      }
+    </script>
+  </body>
+</html>
